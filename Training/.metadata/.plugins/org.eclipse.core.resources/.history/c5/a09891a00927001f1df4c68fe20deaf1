@@ -1,0 +1,20 @@
+package multithread;
+
+public class threadMulti extends Thread{
+	
+	@Override
+	public void run() {
+		System.out.println("Thread is running");
+	}
+	
+	public static void main(String []agrs) {
+		
+		threadMulti threading = new threadMulti();
+		threading.start();
+		
+		threadMulti threading2 = new threadMulti();
+		threading2.start();
+		
+	}
+
+}

@@ -1,0 +1,18 @@
+package multithread;
+
+public class synchRunner {
+
+}
+
+class synch {
+	
+	private int count = 0;
+	
+	public void incremenet() {
+		this.count++;
+	}
+	public int getCount() {
+		return this.count;
+	}
+
+}

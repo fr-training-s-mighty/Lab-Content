@@ -1,0 +1,19 @@
+package soccer.client;
+
+import java.sql.*;
+//import 
+
+public class StatementExample {
+	
+	public static void main(String[] args) {
+		
+		try {
+			
+		}
+		catch(SQLException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

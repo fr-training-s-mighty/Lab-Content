@@ -1,0 +1,42 @@
+package soccer.client;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import soccer.config.DatabaseConnection;
+
+public class BankingSystem {
+
+	public void add() {
+		
+		
+		try (Connection connection = DatabaseConnection.getInstance().getConnection()) {
+			
+		
+		String insertSQL = "INSERT INTO customers (name, balance) VALUES "
+				+ "VALUES (?,?)";
+		
+				try ( PreparedStatement pstmt = connection.prepareStatement(insertSQL)){
+					pstmt.setString(1, "Shiv"); // team id
+					pstmt.setInt(2, 10); // MatchedPlayed
+
+					pstmt.executeUpdate();
+					
+				}
+		}
+		catch(SQLException e) {
+			e.printStackTrace();
+		}
+
+	}
+	
+	
+	public static void main(String[] args) {
+					
+		
+
+	
+}

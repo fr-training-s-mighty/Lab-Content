@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;array.array&apos; to &apos;SingleDim&apos;&#x0A;- Original project: &apos;week1&apos;&#x0A;- Original element: &apos;array.array&apos;&#x0A;- Renamed element: &apos;array.SingleDim&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;array&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;array{array.java[array" matchStrategy="1" name="SingleDim" qualified="false" references="true" similarDeclarations="false" stamp="1717755579493" textual="false" version="1.0"/>
+</session>

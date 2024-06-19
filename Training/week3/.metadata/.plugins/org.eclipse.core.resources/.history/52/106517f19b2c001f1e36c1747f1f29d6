@@ -1,0 +1,18 @@
+package com.simplilearn.respository;
+
+import java.util.List;
+
+import com.simplilearn.model.Todo;
+
+public class InMemoryTodoRepository implements TodoRepository{
+
+	public void addTodo(Todo  todo) {
+	}
+	public void removeTodo(Integer id) {
+	}
+	public void updateTodoStatus(Integer id,boolean completed) {
+	}
+	public List<Todo> getAllTodos() {
+		return null;
+	}
+}

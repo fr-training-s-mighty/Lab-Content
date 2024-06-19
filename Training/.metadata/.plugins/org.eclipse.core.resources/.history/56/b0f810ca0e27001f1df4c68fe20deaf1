@@ -1,0 +1,14 @@
+package multithread;
+
+public class synch {
+	
+	private int count = 0;
+	
+	public void incremenet() {
+		count++;
+	}
+	public int getCount() {
+		return this.count;
+	}
+
+}

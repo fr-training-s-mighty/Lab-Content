@@ -1,0 +1,12 @@
+import java.util.List;
+
+
+
+public interface CustomerRepo {
+
+	
+	void addTodo(Customer  todo);
+	void removeTodo(Integer id);
+	void updateTodoStatus(Integer id,boolean completed);
+	List<Customer> getAllTodos();
+}

@@ -1,0 +1,20 @@
+package multithread;
+
+public class deadlockTest {
+
+}
+
+class Resource{
+	
+	private final String name;
+	
+	public Resource(String name) {
+		super();
+		this.name = name;
+	}
+	
+	public String getName() {
+		return this.name;
+	}
+	
+}

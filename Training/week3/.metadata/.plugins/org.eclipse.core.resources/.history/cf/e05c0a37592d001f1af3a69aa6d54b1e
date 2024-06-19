@@ -1,0 +1,29 @@
+import java.util.List;
+
+public class InMemoryCustomerRepo implements CustomerRepo {
+
+	@Override
+	public void addTodo(Customer todo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeTodo(Integer id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateTodoStatus(Integer id, boolean completed) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Customer> getAllTodos() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

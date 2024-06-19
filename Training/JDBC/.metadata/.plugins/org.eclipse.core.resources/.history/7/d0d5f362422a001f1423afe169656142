@@ -1,0 +1,25 @@
+package soccer.client;
+
+import java.sql.*;
+//import 
+
+public class StatementExample {
+
+
+		public static void main(String[] args) {
+			try (Connection connection = DatabaseConnection.getInstance().getConnection();
+					Statement statement = connection.createStatement()){
+				
+				String insertSQL = "INSERT INTO League ( TeamID, MatchesPlayed, Wins ,Losses, Draws, Points) "
+						+ "VALUES (6,10,2,6,2,8)";
+				statement.executeUpdate(insertSQL);
+				
+			
+				
+			}catch(SQLException e) {
+				e.printStackTrace();
+			}
+
+		}
+
+	}

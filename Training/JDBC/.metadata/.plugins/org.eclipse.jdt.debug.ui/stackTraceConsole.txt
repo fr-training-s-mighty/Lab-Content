@@ -1,0 +1,7 @@
+		String insertSQL1 = "INSERT INTO League (TeamID, MatchesPlayed, Wins, Losses, Draws, Points) VALUES (?, ?, ?, ?, ?, ?)";
+		String insertSQL2 = "INSERT INTO League (TeamID, MatchesPlayed, Wins, Losses, Draws, Points) VALUES (?, ?, ?, ?, ?, ?)";
+
+		Connection connection  = null;
+		try {
+			connection = DatabaseConnection.getInstance().getConnection();
+			PreparedStatement pstmt1 = connection.prepareStatement(insertSQL1);

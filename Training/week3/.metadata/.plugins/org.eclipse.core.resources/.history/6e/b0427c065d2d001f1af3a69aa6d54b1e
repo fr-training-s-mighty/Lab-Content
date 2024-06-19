@@ -1,0 +1,20 @@
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+	
+		ApplicationContext spring_container = new ClassPathXmlApplicationContext("ApplicationContext.xml");
+		
+		CustomerServicer cusService = spring_container.getBean("cusServiceAuto",CustomerServicer.class);
+		
+		
+		cusService.add("Learn" ,"Java");
+		
+		System.out.println("\n All Todos");
+		cusService.getAllTodos();
+
+	}
+}

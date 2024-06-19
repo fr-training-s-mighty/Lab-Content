@@ -1,0 +1,64 @@
+package com.simplilearn.service;
+
+import java.util.List;
+
+import com.simplilearn.model.Todo;
+import com.simplilearn.respository.TodoRepository;
+
+public class TodoServicer implements TodoService {
+	
+	private TodoRepository todoRepository; 
+	
+	public static void main(String[] args) {
+		
+//		TodoServicer todoService = new TodoServicer(new InMemoryTodoRepository());
+//		System.out.println("Adding Todos...");
+//		todoService.addTodo("Learn  Java");
+//		todoService.addTodo("Build a Todo Application");
+//		todoService.addTodo("Refactor code using spring and spring boot");
+//		
+//		System.out.println("\n All Todos");
+//		displayTodos(todoService.getAllTodos());
+//		
+//		System.out.println("\n Marking Todo with ID 1 as completed");
+//		todoService.markCompleted(1);
+//
+//		System.out.println("\n All Todos after update:");
+//		displayTodos(todoService.getAllTodos());
+//		
+//		System.out.println("\n Removing Todo with  id 2 ...");
+//		todoService.removeTodo(2);
+//
+//		System.out.println("\n All Todos after removal:");
+//		displayTodos(todoService.getAllTodos());
+		
+
+	}
+
+	@Override
+	public void addTodo(String todo) {
+		// TODO Auto-generated method stub
+		Todo Temptodo = new Todo(0, todo, false);
+		todoRepository.addTodo(Temptodo);
+		
+	}
+
+	@Override
+	public void removeTodo(Integer id) {
+		// TODO Auto-generated method stub
+		todoRepository.removeTodo(id);
+	}
+
+	@Override
+	public void updateTodoStatus(Integer id, boolean completed) {
+		// TODO Auto-generated method stub
+		todoRepository.updateTodoStatus(id, true);
+	}
+
+	@Override
+	public List<Todo> getAllTodos() {
+		// TODO Auto-generated method stub
+		return todoRepository.getAllTodos();
+	}
+}
+

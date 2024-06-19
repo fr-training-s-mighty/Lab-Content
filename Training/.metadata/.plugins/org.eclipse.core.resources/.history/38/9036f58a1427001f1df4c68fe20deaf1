@@ -1,0 +1,45 @@
+package multithread;
+
+public class deadlockTest {
+
+	public static void main(String[] args) {
+		final Resource res1 = new Resource("R1");
+		final Resource res2 = new Resource("R2");
+		Thread th1 = new Thread(() - > {
+			acquiredResInOrder(res1,res2);
+		},"Thread1");
+		
+		Thread th2 = new Thread(() - > {
+			acquiredResInOrder(res1,res2);
+		},"Thread2");
+
+	}
+
+	private static Thread acquiredResInOrder(Resource res1, Resource res2) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}
+
+class Resource{
+	
+	private final String name;
+	
+	public Resource(String name) {
+		super();
+		this.name = name;
+	}
+	
+	public String getName() {
+		return this.name;
+	}
+	
+	public synchronized void acquire(Resource other) {
+		System.out.println(Thread.currentThread().getName()+" acquired "+this.getName()+" waiting to acquire "+other.getName());
+		other.access();
+	}
+	private synchronized void access() {
+		System.out.println(Thread.currentThread().getName() + " accessing "+ this.getName());
+	}
+	
+}

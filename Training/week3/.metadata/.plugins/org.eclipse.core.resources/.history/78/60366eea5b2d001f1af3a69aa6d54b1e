@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+		
+	<!-- Bean definition for TodoRepository -->
+	<bean class="com.simplilearn.repository.InMemoryTodoRepository"
+		id="todoRepository" />
+
+	<!-- Bean definition for TodoService using setter injection -->
+	<bean class="com.simplilearn.service.TodoServiceImpl"
+		id="todoServiceSetter">
+		<property name="todoRepository" ref="todoRepository"/>
+	</bean>
+	
+	<!-- Bean definition for TodoService using constructor injection -->
+	<bean class="com.simplilearn.service.TodoServiceImpl"
+		id="todoServiceConstructor">
+		<constructor-arg ref="todoRepository"/>
+	</bean>
+	
+	<!-- Bean definition for TodoService using autowire injection -->
+	<bean class="com.simplilearn.service.TodoServiceImpl"
+		id="todoServiceAuto" autowire="byType">
+		
+	</bean>
+</beans>

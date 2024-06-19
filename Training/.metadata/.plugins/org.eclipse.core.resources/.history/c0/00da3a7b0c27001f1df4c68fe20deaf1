@@ -1,0 +1,22 @@
+package multithread;
+
+public class runnableMulti implements Runnable{
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		System.out.println("Thread is running ");
+		
+	}
+	public static void main(String []agrs) {
+		
+		runnableMulti threading = new runnableMulti();
+		Thread a1 = new Thread(threading);
+
+
+		a1.start();
+		
+	}
+	
+
+}

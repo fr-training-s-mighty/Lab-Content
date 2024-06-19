@@ -1,0 +1,5 @@
+package soccer.config;
+
+public class DatabaseConnection {
+
+}

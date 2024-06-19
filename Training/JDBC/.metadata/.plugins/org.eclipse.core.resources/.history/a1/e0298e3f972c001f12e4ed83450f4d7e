@@ -1,0 +1,111 @@
+package soccer.client;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import soccer.config.DatabaseConnection;
+
+public class BankingSystem {
+
+	public static void add() {
+		
+String insertSQL1 = "INSERT INTO customers (name, balance) VALUES (?, ?)";
+		
+		Connection connection  = null;
+		try {
+			connection = DatabaseConnection.getInstance().getConnection();
+			PreparedStatement pstmt1 = connection.prepareStatement(insertSQL1);					
+			pstmt1.setString(1,"SH");
+			pstmt1.setInt(2, 10); // MatchedPlayed
+
+			pstmt1.executeUpdate();
+						
+					
+			}
+			catch(SQLException e) {
+				e.printStackTrace();
+			}
+
+	}
+	
+	public static void view() {
+		String insertSQL1 = "select * From customers WHERE name = ?";
+		
+		Connection connection  = null;
+		try {
+			connection = DatabaseConnection.getInstance().getConnection();
+			PreparedStatement pstmt1 = connection.prepareStatement(insertSQL1);					
+			pstmt1.setString(1,"SH");
+			try ( ResultSet rs = pstmt1.executeQuery()){
+				while ( rs.next() ) {
+					System.out.println("ID : " + rs.getInt("id") + ",Balance: "+rs.getInt("balance"));
+				}
+			}						
+					
+			}
+			catch(SQLException e) {
+				e.printStackTrace();
+			}
+
+	}
+	
+	public static void updateBal(int id,double change) {
+		String insertSQL1 = "select * From customers WHERE id = ?";
+		double bal=0.0;
+		Connection connection  = null;
+		try {
+			connection = DatabaseConnection.getInstance().getConnection();
+			PreparedStatement pstmt1 = connection.prepareStatement(insertSQL1);					
+			pstmt1.setInt(1,id);
+			try ( ResultSet rs = pstmt1.executeQuery()){
+				while ( rs.next() ) {
+					bal=rs.getDouble("balance");
+				}
+			}						
+					
+			}
+			catch(SQLException e) {
+				e.printStackTrace();
+			}
+		bal+=change;
+		insertSQL1 = "UPDATE customers SET balance =? WHERE id = ?";
+		
+		 connection  = null;
+		try {
+			connection = DatabaseConnection.getInstance().getConnection();
+			PreparedStatement pstmt1 = connection.prepareStatement(insertSQL1);					
+			pstmt1.setDouble(1,bal);
+			pstmt1.setInt(2, 6); // MatchedPlayed
+
+			pstmt1.executeUpdate();
+						
+					
+			}
+			catch(SQLException e) {
+				e.printStackTrace();
+			}
+
+	}
+	
+	
+	public static void main(String[] args) {
+				
+//		add();
+//		view();
+		updateBal(6,1000);
+		
+		
+
+		
+
+		
+		}
+		
+
+		
+
+	}
+

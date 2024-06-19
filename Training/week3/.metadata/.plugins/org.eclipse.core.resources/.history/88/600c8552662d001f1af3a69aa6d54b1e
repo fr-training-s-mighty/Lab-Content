@@ -1,0 +1,9 @@
+package com.simplilearn.config;
+
+import com.simplilearn.model.*;
+import com.simplilearn.respository.*;
+import com.simplilearn.service.*;
+
+public class AppConfig {
+
+}

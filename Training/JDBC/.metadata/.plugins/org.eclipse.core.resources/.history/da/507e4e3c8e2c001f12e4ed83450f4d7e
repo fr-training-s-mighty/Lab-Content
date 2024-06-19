@@ -1,0 +1,7 @@
+package soccer.client;
+
+import java.sql.*;
+
+public class NavTrial {
+
+}

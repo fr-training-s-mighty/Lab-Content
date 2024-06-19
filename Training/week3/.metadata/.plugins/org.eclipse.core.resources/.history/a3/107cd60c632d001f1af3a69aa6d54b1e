@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+		
+	<!-- Bean definition for TodoRepository -->
+	<bean class="com.simplilearn.repository.InMemoryCustomerRepo"
+		id="cusRepository" />
+
+	<!-- Bean definition for TodoService using setter injection -->
+	<bean class="com.simplilearn.services.BankServicerImpl"
+		id="cusServiceSetter">
+		<property name="custRepository" ref="cusRepository"/>
+	</bean>
+	<!-- This name is the name of the function   -->
+	
+	<!-- Bean definition for TodoService using constructor injection -->
+	<bean class="com.simplilearn.services.BankServicerImpl"
+		id="cusServiceConstructor">
+		<constructor-arg ref="cusRepository"/>
+	</bean>
+	
+	<!-- Bean definition for TodoService using autowire injection -->
+	<bean class="com.simplilearn.services.BankServicerImpl"
+		id="cusRepositoryAuto" autowire="byType">
+		
+	</bean>
+</beans>
