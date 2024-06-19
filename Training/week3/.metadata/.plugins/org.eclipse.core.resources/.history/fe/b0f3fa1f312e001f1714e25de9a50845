@@ -1,0 +1,5 @@
+package org.simplilearn.aspect;
+
+public class LoggingAspect {
+
+}

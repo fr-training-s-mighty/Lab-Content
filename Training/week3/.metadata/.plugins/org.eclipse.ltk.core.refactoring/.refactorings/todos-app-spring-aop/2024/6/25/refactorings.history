@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;aspect&apos; to &apos;org.simplilearn.aspect&apos;&#x0A;- Original project: &apos;todos-app-spring-aop&apos;&#x0A;- Original element: &apos;todos-app-spring-aop/src/main/java/aspect&apos;&#x0A;- Renamed element: &apos;todos-app-spring-aop/src/main/java/org.simplilearn.aspect&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;aspect&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;aspect" name="org.simplilearn.aspect" qualified="false" references="true" stamp="1718797002831" textual="false" version="1.0"/>
+</session>
