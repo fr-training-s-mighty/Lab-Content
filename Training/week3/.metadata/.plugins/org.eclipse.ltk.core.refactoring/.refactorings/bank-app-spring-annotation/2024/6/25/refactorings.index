@@ -3,3 +3,4 @@
 1718785578163	Rename type 'BankServicer'
 1718788741048	Rename type 'BankService'
 1718788764059	Rename type 'BankServicerImpl'
+1718795480792	Rename package 'com.simplilearn.services'

@@ -7,8 +7,8 @@ import com.simplilearn.model.Customer;
 
 import java.util.*;
 
-//@Repository(value = "customerRepository")
-@Repository
+
+@Repository(value = "todoRepository") 
 public class InMemoryCustomerRepo implements CustomerRepo {
 
 	ArrayList<Customer> customers = new ArrayList<Customer>();

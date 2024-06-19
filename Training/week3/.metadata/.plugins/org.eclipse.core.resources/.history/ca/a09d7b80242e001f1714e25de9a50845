@@ -1,0 +1,34 @@
+package com.simplilearn.respository;
+
+import java.util.List;
+
+import com.simplilearn.model.Todo;
+
+public class jdbcTodoRepository implements TodoRepository{
+
+	@Override
+	public void addTodo(Todo todo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeTodo(Integer id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateTodoStatus(Integer id, boolean completed) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Todo> getAllTodos() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+}

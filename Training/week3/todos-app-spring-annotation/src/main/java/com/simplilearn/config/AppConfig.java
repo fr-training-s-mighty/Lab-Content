@@ -9,7 +9,7 @@ import com.simplilearn.respository.*;
 import com.simplilearn.service.*;
 
 @Configuration
-@ComponentScan(basePackages = "{com.simplilearn.repository,com.simplilearn.service}")
+@ComponentScan(basePackages = "{com.simplilearn.respository,com.simplilearn.service}")
 public class AppConfig {
 
 	//NOTE  : Bean Id == Method Name (default) , @Bean(name = "beanName")
