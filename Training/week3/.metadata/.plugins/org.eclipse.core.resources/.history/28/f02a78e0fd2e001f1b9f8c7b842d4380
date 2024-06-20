@@ -1,0 +1,5 @@
+package com.simplilearn.config;
+
+public class InitializeTodosSetup {
+
+}

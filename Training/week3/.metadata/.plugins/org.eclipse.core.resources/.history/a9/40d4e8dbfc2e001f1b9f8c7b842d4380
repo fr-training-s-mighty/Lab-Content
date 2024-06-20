@@ -1,0 +1,5 @@
+package com.simplilearn.resources;
+
+public class TodoResource {
+
+}
