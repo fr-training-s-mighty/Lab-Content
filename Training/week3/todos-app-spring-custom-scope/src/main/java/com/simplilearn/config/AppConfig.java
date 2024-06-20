@@ -36,15 +36,14 @@ public class AppConfig {
 		return new JdbcTemplate(dataSource);
 	}
 	
-	@Bean
-	@Scope("custom")
-	public TodoService todoService() {
-		return new TodoServiceImpl(jdbcTemplate(dataSource()));
-	}
+//	@Bean
+//	@Scope("custom")
+//	public TodoService todoService() {
+//		return new TodoServiceImpl(jdbcTemplate(dataSource()));
+//	}
 	
 
-}
-	
+
 	
 	
 }
