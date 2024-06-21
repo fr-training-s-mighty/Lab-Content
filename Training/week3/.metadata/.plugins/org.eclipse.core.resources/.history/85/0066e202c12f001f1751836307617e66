@@ -1,0 +1,78 @@
+package com.simplilearn.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.simplilearn.model.Todo;
+import com.simplilearn.respository.TodoRepository;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.simplilearn.model.Todo;
+import com.simplilearn.respository.TodoRepository;
+
+@Service(value ="todoService")
+public class TodoServiceImpl implements TodoService{
+	
+	// service depends on repository
+	@Autowired
+	private TodoRepository todoRepository; 
+	
+	
+	//code change for setter injection
+	// default constructor
+	public TodoServiceImpl() {
+		
+	}
+	
+//	// called by spring container to inject todoRepository
+//	@Autowired
+	public void setTodoRepository(TodoRepository todoRepository) {
+		System.out.println("setter method called by spring container to inject todoRepository");
+		this.todoRepository = todoRepository;
+	}
+	
+//	@Autowired
+	public TodoServiceImpl(TodoRepository todoRepository) {
+		System.out.println("constructor called by spring container to inject todoRepository");
+		this.todoRepository = todoRepository;
+	}
+	
+
+	@Override
+	public void addTodo(String description) {
+		Todo todo = new Todo(0, description, false);
+		todoRepository.addTodo(todo);
+	}
+
+	@Override
+	public void removeTodo(Integer id) {
+		todoRepository.removeTodo(id);
+		
+	}
+
+	@Override
+	public void markCompleted(Integer id) {
+		todoRepository.updateTodoStatus(id, true);
+	}
+
+	@Override
+	public List<Todo> getAllTodos() {
+		return todoRepository.getAllTodos();
+	}
+	
+	@Override
+	public boolean findById(Integer id) {
+		for(Todo todo: todoRepository.getAllTodos()) {
+			if(todo.getId()==id) {
+				return True;
+			}
+		}
+		return False;
+	}
+
+}
