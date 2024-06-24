@@ -1,0 +1,5 @@
+package com.simplilearn.exception;
+
+public class TodoNotFoundException {
+
+}
